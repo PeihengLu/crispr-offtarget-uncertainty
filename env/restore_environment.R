@@ -13,5 +13,9 @@ for (row in 1:nrow(package_info)) {
   )
 }
 
+BiocManager::install("BiocVersion")
+BiocManager::install("BiocStyle")
+BiocManager::install("NuPoP")
+
 # Load installed packages
 lapply(package_info$Package, library, character.only = TRUE)
